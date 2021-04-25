@@ -8,6 +8,7 @@
   --tableColor: #000;
   --tableBackground: #dad9d7;
   --tableHeading:#cda434;
+  --tableHover: #fff;
   --sunVisibility: hidden;
   --progressBar: #00001c;
   --border: "none";
@@ -21,6 +22,7 @@
   --tableColor: #fff;
   --tableBackground: #020031;
   --tableHeading: #dbd7d6;
+  --tableHover: #000;
   --moonVisibility: hidden;
   --progressBar: #020031;
   --border: 1px solid #fff;
@@ -88,7 +90,7 @@ td{
 }
 td:hover{
 background-color: var(--tableHeading);
-color: #fff;
+color: var(--tableHover);
 }
 #mobile-version,
 #desktop-version{

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/form.css">
+  <script src="https://kit.fontawesome.com/e206f53c0e.js" crossorigin="anonymous"></script>
+  <title>formulaire de contact</title>
+</head>
+<body>
+<section class="get_in_touch">
+  <h1 class="title">Contactez-moi</h1>
+  <div class="container">
+    <form action="https://formspree.io/f/xwkaewbb" method="POST" class="contact-form row">
+      <div class="form-field col-lg-6">
+        <input id="name" class="input-text" type="text" name="name" required="required">
+        <label for="name" class="label">votre nom</label>
+      </div>
+      <div class="form-field col-lg-6">
+        <input id="email" class="input-text" type="email" name="email" required="required">
+        <label for="email" class="label">email</label>
+      </div>
+      <div class="form-field col-lg-6">
+        <input id="company" class="input-text" type="text" name="company">
+        <label for="company" class="label">nom d'entreprise</label>
+      </div>
+      <div class="form-field col-lg-6">
+        <input id="phone" class="input-text" type="text" name="phone">
+        <label for="phone" class="label">téléphone</label>
+      </div>
+      <div class="form-field col-lg-12">
+        <input id="message" class="input-text" type="text" name="message" required="required">
+        <label for="message" class="label">votre message</label>
+      </div>
+      <div class="form-field col-lg-6">
+        <input class="submit-btn" type="submit" value="Envoyer" name="">
+      </div>
+    </form>
+  </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+/* le thème sombre ou claire appliquée sur le body et est appeller par la fonction js */
+[data-theme="light"]{
+  --background: #fffff0;
+  --textColor: #000;
+  --lavanderCards: #d1c7c7;
+  --greyCards: #ebebeb;
+  --cardShadow: #9c9c9c;
+  --tableColor: #000;
+  --tableBackground: #dad9d7;
+  --tableHeading:#cda434;
+  --sunVisibility: hidden;
+  --progressBar: #00001c;
+  --border: "none";
+}
+[data-theme="dark"]{
+  --background: #282a35;
+  --textColor: #fff;
+  --lavanderCards: #00001c;
+  --greyCards: #00001c;
+  --cardShadow: "none";
+  --tableColor: #fff;
+  --tableBackground: #020031;
+  --tableHeading: #dbd7d6;
+  --moonVisibility: hidden;
+  --progressBar: #020031;
+  --border: 1px solid #fff;
+}
+/* les deux icones jour et nuit. La fonction js fait changer le mode jour ou nuit*/
+.fa-moon,
+.fa-sun{
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  padding-right: 2rem;
+  color: var(--tableHeading);
+}
+#mode .fa-moon:hover,
+#mode .fa-sun:hover {
+  scale: 1.2;
+  color: #ffd60a;
+}
+.fa-moon{
+  visibility: var(--moonVisibility);
+}
+.fa-sun{
+  visibility: var(--sunVisibility);
+}
+/* la navbar */
+.nav-link:hover{
+  background-color: var(--tableHeading);
+  border-radius: .5rem;
+  width: inherit;
+  color: #fff;
+}
+/* les couleurs du fond */
+body{
+  background-color: var(--background);
+  color: var(--textColor);
+}
+.background-lavander{
+  background-color: var(--lavanderCards);
+  -webkit-filter: drop-shadow(16px 16px 10px var(--cardShadow));
+         filter: drop-shadow(16px 16px 10px  var(--cardShadow));
+  border-radius: .5rem;
+  padding: .5rem;
+}
+.background-grey{
+  background-color: var(--greyCards);
+  -webkit-filter: drop-shadow(16px 16px 10px  var(--cardShadow));
+         filter: drop-shadow(16px 16px 10px  var(--cardShadow));
+  border-radius: .5rem;
+  padding: 1rem;
+}
+/* le tableau dans la section formation fitness et bien-être. Le tableau est créer par la fonction JS. Visible uniquement en mode desktop */
+th{
+  background-color: var(--tableHeading);
+  color: #fff;
+  font-weight: bolder;
+  padding: .1rem 1.2rem;
+  vertical-align: middle;
+}
+td{
+  background-color: var(--tableBackground);
+  color: var(--tableColor);
+  font-size: .8rem;
+  padding: .1rem 1.2rem;
+  border: 1px solid #fff;
+}
+td:hover{
+background-color: var(--tableHeading);
+color: #fff;
+}
+#mobile-version,
+#desktop-version{
+  display: none;
+}
+/* le logo desCodeuses */
+.descodeuses{
+  width: 30%;
+}
+/* les headings stylisés  */
+.logo{
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 3rem;
+  margin-left: 5px;
+}
+.logo span{
+  font-weight: 400;
+}
+.logo-h2{
+  font-size: 2.1rem;
+  font-weight: 800;
+}
+.logo-h2 span{
+  font-weight: 500;
+}
+.description{
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-left: 5rem;
+}
+/* les cartes dans la section 'Mes projets' */
+.card{
+  display: inline-block;
+  width: 25%;
+  margin: .5rem;
+}
+/* les barres de progression dans la section 'compétences informatique' */
+.informatiqueHidden{
+  display: none;
+}
+/* pour eviter le scroll je remplace le heading en version mobile. Il est caché actuellement en version desktop. Voir la ligne ci-dessus*/
+#informatiqueVisible{
+  display: block;
+}
+.progress-bar{
+  border: var(--border);
+  background-color: var(--progressBar);
+}
+.progress{
+  height: 5vh;
+  border-radius: .5rem;
+}
+/* list style */
+ul{
+list-style: none;
+}
+li i{
+  color: var(--tableHeading);
+  margin-right: .5rem;
+}
+/* le footer */
+.fas,
+.fab,
+.far{
+  margin-top: 20px;
+}
+a i{
+  color: #282c34;
+}
+.list_in_footer {
+  margin: 1.5rem 0;
+}
+.list_in_footer a{
+  text-decoration: none;
+  padding: 0 10px;
+  opacity:0.8;
+}
+.copyright{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media only screen and (max-width: 1100px){
+  #portfolio,
+  #experience-fitness{
+    flex-direction: column;
+  }
+  .card{
+    display: block;
+    margin: 1rem auto;
+    width: 70%;
+    height: auto;
+  }
+  .informatiqueHidden{
+    display: block;
+  }
+  #informatiqueVisible{
+    display: none;
+  }
+  /* j'ai changer la taille des headings pour eviter le scroll horizontal */
+  .logo{
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .logo span{
+    font-weight: 500;
+  }
+  .logo-h2{
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  .logo-h2 span{
+    font-weight: 400;
+  }
+  /* la taille du logo desCodeuses */
+  .descodeuses{
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  /* la navbar */
+  ul li a:hover{
+    width: 40vw;
+    /* text-align: center; */
+  }
+  .description{
+    display: none;
+  }
+  .card{
+    width: 100%;
+  }
+  footer ul li{
+    margin: 0 auto;
+    font-size: .8rem;
+  }
+}

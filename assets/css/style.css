@@ -127,8 +127,7 @@ color: var(--tableHover);
 /* les cartes dans la section 'Mes projets' */
 .card{
   display: inline-block;
-  width: 25%;
-  margin: .5rem;
+  width: 18%;
 }
 /* les barres de progression dans la section 'compétences informatique' */
 .informatiqueHidden{

@@ -218,6 +218,9 @@ a i{
     width: 40vw;
     /* text-align: center; */
   }
+  .my-portret{
+    width: 50%;
+  }
   .description{
     display: none;
   }

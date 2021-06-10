@@ -221,6 +221,9 @@ a i{
   .my-portret{
     width: 50%;
   }
+  ul li{
+    width: 75vw;
+  }
   .description{
     display: none;
   }
